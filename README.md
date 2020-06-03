@@ -6,7 +6,7 @@
 <h3>2.可以通过xdToggLine("dom") 或 new xdToggLine("dom")来使用这个插件了</h3>
 <h4>DEMO</h4>
 <CODE>
- ` `` 
+ ```
 <div class="demowarap">
             <div class="xdToggLinebox demobox">
                 <div class="chooseItem">A</div><input type="text" value="" />
@@ -18,4 +18,4 @@
           new xdToggLine(".demowarap");
         </script>
 </CODE>
-` `` 
+```
