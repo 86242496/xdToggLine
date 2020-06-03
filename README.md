@@ -7,16 +7,16 @@
 <h4>DEMO</h4>
 
  ```html
-<div class="demowarap">
-            <div class="xdToggLinebox demobox">
-                <div class="chooseItem">A</div><input type="text" value="" />
-            </div>           
-        </div>
-```html
-        <script src="jquery.js"></script>
-        <script src="xdToggLine.js"></script>
-        <script>
-          new xdToggLine(".demowarap");
-        </script>
+  <div class="demowarap">
+       <div class="xdToggLinebox demobox">
+           <div class="chooseItem">A</div><input type="text" value="" />
+       </div>           
+  </div>
+
+  <script src="jquery.js"></script>
+  <script src="xdToggLine.js"></script>
+  <script>
+    new xdToggLine(".demowarap");
+  </script>
 
 
