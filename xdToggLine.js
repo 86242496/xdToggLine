@@ -40,6 +40,7 @@
         event: function () {
             var _this = this;
             var thishtml = $(_this.targetDom).html();
+            $(_this.targetDom).append('<div><button class="xd-buttons xd-button-primary addLine">添加</button></div>');
             //  删除
             $(this.targetDom).find('.xdToggLinebox .deleteLine').on('click', function () {
                 //最后一个时不能删除
@@ -60,6 +61,7 @@
                 $(this).before($(_this.targetDom).find('.xdToggLinebox').eq(0).clone().append('<button class="xd-buttons xd-button-caution deleteLine">删除</button>'));
                 $(_this.targetDom).find('.xdToggLinebox').eq($(_this.targetDom).find('.xdToggLinebox').length - 1).find('input').val("");
                 $(this).unbind('click');
+                $(_this.targetDom).find('.addLine').remove();
                 new xdToggLine($(_this.targetDom));//实例化本身
                 _this.orderNewHtml()
             })
