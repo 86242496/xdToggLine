@@ -1,0 +1,14 @@
+.demobox{
+    line-height: 34px;
+}
+.demobox .chooseItem{
+    display: inline-block;
+}
+.demobox input{
+    border:1px solid #ccc;
+    padding: 5px;
+   
+}
+.demobox *{
+    margin:0 5px
+}

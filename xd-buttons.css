@@ -1,0 +1,816 @@
+/*! @license
+*
+* Buttons
+* Copyright 2012-2014 Alex Wolfe and Rob Levin
+*
+*/
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+    /*使 div 元素看上去像一个按钮*/
+}
+
+.xd-buttons {
+    color: #666;
+    background-color: #EEE;
+    border-color: #EEE;
+    font-weight: 300;
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    text-decoration: none;
+    text-align: center;
+    line-height: 32px;
+    height: 32px;
+    padding: 0 15px;
+    margin: 0;
+    display: inline-block;
+    appearance: none;
+    cursor: pointer;
+    border: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    user-select: none;
+    border-radius: 4px;
+    outline: none;
+    font-variant: tabular-nums;
+    background-color: #fff;
+    -webkit-font-feature-settings: 'tnum';
+    font-feature-settings: 'tnum'
+    /*
+    * Disabled State
+    *
+    * The disabled state uses the class .disabled, is-disabled,
+    * and the form attribute disabled="disabled".
+    * The use of !important is only added because this is a state
+    * that must be applied to all buttons when in a disabled state.
+    */
+}
+
+.xd-buttons i {
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.xd-buttons::after {
+    background-color: transparent;
+}
+
+.xd-buttons:visited {
+    color: #666;
+}
+
+.xd-buttons:hover,
+.xd-buttons:focus {
+    background-color: transparent;
+    text-decoration: none;
+    outline: none;
+}
+
+.xd-buttons:active,
+.xd-buttons.active,
+.xd-buttons.is-active {
+    /* text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3); */
+    /* text-decoration: none;
+    background-color: #eeeeee;
+    border-color: #cfcfcf;
+    color: #d4d4d4;
+    -webkit-transition-duration: 0s;
+    transition-duration: 0s; */
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.xd-buttons.disabled,
+.xd-buttons.is-disabled,
+.xd-buttons:disabled,
+.xd-buttons[disabled] {
+    top: 0 !important;
+    background-color: #f5f5f5 !important;
+    border: 1px solid #d9d9d9 !important;
+    text-shadow: 0 1px 1px white !important;
+    color: rgba(0, 0, 0, 0.65) !important;
+    cursor: not-allowed !important;
+    appearance: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+
+/*
+  * Base Button Tyography
+  *
+  */
+
+
+/* 转换成大写 */
+
+.xd-buttons-uppercase {
+    text-transform: uppercase;
+}
+
+
+/* 转换成小写 */
+
+.xd-buttons-lowercase {
+    text-transform: lowercase;
+}
+
+.xd-button-capitalize {
+    text-transform: capitalize;
+}
+
+.xd-button-small-caps {
+    font-variant: small-caps;
+}
+
+
+/* 文本超大号 */
+
+.xd-button-icon-txt-large {
+    font-size: 36px !important;
+}
+
+
+/*
+  * Base padding
+  *
+  */
+
+.xd-button-width-small {
+    padding: 0 10px !important;
+}
+
+
+/*
+  * Base Colors
+  *
+  * Create colors for buttons
+  * (.button-primary, .button-secondary, etc.)
+  */
+
+.xd-button-default {
+    background-color: transparent;
+    border: 1px solid #d9d9d9;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.xd-button-default:visited {
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.xd-button-default:hover,
+.xd-button-default:focus {
+    background-color: transparent;
+    border-color: #4cb0f9;
+    color: #4cb0f9;
+}
+
+.xd-button-default:active,
+.xd-button-default.active,
+.xd-button-default.is-active {
+    background-color: transparent;
+    border-color: #4cb0f9;
+    color: #4cb0f9;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.xd-button-default.xd-button-loading i {
+    border-color: #4cb0f9;
+    border-top-color: transparent;
+}
+
+.xd-button-primary {
+    background-color: rgba(27, 154, 247);
+    border-color: rgba(27, 154, 247);
+    color: #FFF;
+}
+
+.xd-button-primary:visited {
+    color: #FFF;
+}
+
+.xd-button-primary:hover,
+.xd-button-primary:focus {
+    background-color: rgba(27, 154, 247, .8);
+    border-color: rgba(27, 154, 247, .8);
+    color: #FFF;
+}
+
+.xd-button-primary:active,
+.xd-button-primary.active,
+.xd-button-primary.is-active {
+    background-color: #2798eb;
+    border-color: #2798eb;
+    color: #FFF;
+}
+
+.xd-button-link {
+    background-color: transparent;
+    border-color: #FFF;
+    color: #1B9AF7;
+}
+
+.xd-button-link:visited {
+    color: #1B9AF7;
+}
+
+.xd-button-link:hover,
+.xd-button-link:focus {
+    color: #1B9AF7;
+}
+
+.xd-button-link:active,
+.xd-button-link.active,
+.xd-button-link.is-active {
+    background-color: transparent;
+    color: #0f71b9;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.button-inverse,
+.button-inverse-flat {
+    background-color: #222;
+    border-color: #222;
+    color: #EEE;
+}
+
+.button-inverse:visited,
+.button-inverse-flat:visited {
+    color: #EEE;
+}
+
+.button-inverse:hover,
+.button-inverse:focus,
+.button-inverse-flat:hover,
+.button-inverse-flat:focus {
+    background-color: #3c3c3c;
+    border-color: #3c3c3c;
+    color: #EEE;
+}
+
+.button-inverse:active,
+.button-inverse.active,
+.button-inverse.is-active,
+.button-inverse-flat:active,
+.button-inverse-flat.active,
+.button-inverse-flat.is-active {
+    background-color: #222222;
+    border-color: #222222;
+    color: #090909;
+}
+
+.xd-button-sucess {
+    background-color: #A5DE37;
+    border-color: #A5DE37;
+    color: #FFF;
+}
+
+.xd-button-sucess:visited {
+    color: #FFF;
+}
+
+.xd-button-sucess:hover,
+.xd-button-sucess:focus {
+    background-color: #b9e563;
+    border-color: #b9e563;
+    color: #FFF;
+}
+
+.xd-button-sucess:active,
+.xd-button-sucess.active {
+    background-color: #a1d243;
+    border-color: #a1d243;
+    color: #FFF;
+}
+
+.xd-button-green {
+    background-color: #5cb85c;
+    border-color: #5cb85c;
+    color: #FFF;
+}
+
+.xd-button-green:visited {
+    color: #FFF;
+}
+
+.xd-button-green:hover,
+.xd-button-green:focus {
+    background-color: #95d195;
+    border-color: #95d195;
+    color: #FFF;
+}
+
+.xd-button-green:active,
+.xd-button-green.active {
+    background-color: #95d195;
+    border-color: #95d195;
+    color: #FFF;
+}
+
+.xd-button-highlight {
+    background-color: #FEAE1B;
+    border-color: #FEAE1B;
+    color: #FFF;
+}
+
+.xd-button-highlight:visited {
+    color: #FFF;
+}
+
+.xd-button-highlight:hover,
+.xd-button-highlight:focus {
+    background-color: #fec04e;
+    border-color: #fec04e;
+    color: #FFF;
+}
+
+.xd-button-highlight:active,
+.xd-button-highlight.active,
+.xd-button-highlight.is-active {
+    background-color: #f3ab26;
+    border-color: #f3ab26;
+    color: #FFF;
+}
+
+.xd-button-caution {
+    background-color: #ff4d4f;
+    border-color: #ff4d4f;
+    color: #FFF;
+}
+
+.xd-button-caution:visited,
+.xd-button-caution-flat:visited {
+    color: #FFF;
+}
+
+.xd-button-caution:hover,
+.xd-button-caution:focus {
+    background-color: #ff7680;
+    border-color: #ff7680;
+    color: #FFF;
+}
+
+.xd-button-caution:active,
+.xd-button-caution.active,
+.xd-button-caution.is-active {
+    background-color: #f64c59;
+    border-color: #f64c59;
+    color: #FFF;
+}
+
+.button-royal,
+.button-royal-flat {
+    background-color: #7B72E9;
+    border-color: #7B72E9;
+    color: #FFF;
+}
+
+.button-royal:visited,
+.button-royal-flat:visited {
+    color: #FFF;
+}
+
+.button-royal:hover,
+.button-royal:focus,
+.button-royal-flat:hover,
+.button-royal-flat:focus {
+    background-color: #a49ef0;
+    border-color: #a49ef0;
+    color: #FFF;
+}
+
+.button-royal:active,
+.button-royal.active,
+.button-royal.is-active,
+.button-royal-flat:active,
+.button-royal-flat.active,
+.button-royal-flat.is-active {
+    background-color: #827ae1;
+    border-color: #827ae1;
+    color: #5246e2;
+}
+
+
+/*
+  * Base Layout Styles
+  *
+  * Very Miminal Layout Styles
+  */
+
+
+/* 属性将使按钮适合其父宽度。 */
+
+.xd-button-block,
+.xd-button-stacked {
+    display: block;
+}
+
+
+/*
+  * 3D Buttons
+  *
+  * These buttons have a heavy three dimensional
+  * style that mimics the visual appearance of a
+  * real life button.
+  */
+
+
+/*
+  * Glowing Buttons
+  *
+  * A pulse like glow that appears
+  * rythmically around the edges of
+  * a button.
+  */
+
+
+/*
+  * Glow animation mixin for Compass users
+  *
+  */
+
+
+/*
+  * Glowing Keyframes
+  *
+  */
+
+@-webkit-keyframes glowing {
+    from {
+        -webkit-box-shadow: 0 0 0 rgba(44, 154, 219, 0.3);
+        box-shadow: 0 0 0 rgba(44, 154, 219, 0.3);
+    }
+    50% {
+        -webkit-box-shadow: 0 0 20px rgba(44, 154, 219, 0.8);
+        box-shadow: 0 0 20px rgba(44, 154, 219, 0.8);
+    }
+    to {
+        -webkit-box-shadow: 0 0 0 rgba(44, 154, 219, 0.3);
+        box-shadow: 0 0 0 rgba(44, 154, 219, 0.3);
+    }
+}
+
+@keyframes glowing {
+    from {
+        -webkit-box-shadow: 0 0 0 rgba(44, 154, 219, 0.3);
+        box-shadow: 0 0 0 rgba(44, 154, 219, 0.3);
+    }
+    50% {
+        -webkit-box-shadow: 0 0 20px rgba(44, 154, 219, 0.8);
+        box-shadow: 0 0 20px rgba(44, 154, 219, 0.8);
+    }
+    to {
+        -webkit-box-shadow: 0 0 0 rgba(44, 154, 219, 0.3);
+        box-shadow: 0 0 0 rgba(44, 154, 219, 0.3);
+    }
+}
+
+
+/*
+  * Dropdown Container
+  *
+  */
+
+.xd-button-dropdown {
+    position: relative;
+    overflow: visible;
+    display: inline-block;
+}
+
+
+/*
+  * Dropdown List Style
+  *
+  */
+
+.xd-button-dropdown-list {
+    display: none;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    min-width: 100%;
+    list-style-type: none;
+    background: rgba(255, 255, 255, 0.95);
+    border-style: solid;
+    border-width: 1px;
+    border-color: #d4d4d4;
+    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    -webkit-box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /*
+    * Dropdown Below
+    *
+    */
+    /*
+    * Dropdown Above
+    *
+    */
+}
+
+.xd-button-dropdown-list.is-below {
+    top: 100%;
+    border-top: none;
+    border-radius: 0 0 3px 3px;
+}
+
+.xd-button-dropdown-list.is-above {
+    bottom: 100%;
+    top: auto;
+    border-bottom: none;
+    border-radius: 3px 3px 0 0;
+    -webkit-box-shadow: 0 -2px 7px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 -2px 7px rgba(0, 0, 0, 0.2);
+}
+
+
+/*
+  * Dropdown Buttons
+  *
+  */
+
+.xd-button-dropdown-list>li {
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+.xd-button-dropdown-list>li>a {
+    display: block;
+    line-height: 40px;
+    font-size: 12.8px;
+    padding: 5px 10px;
+    float: none;
+    color: #666;
+    text-decoration: none;
+}
+
+.xd-button-dropdown-list>li>a:hover {
+    color: #5e5e5e;
+    background: #f6f6f6;
+    text-decoration: none;
+}
+
+.xd-button-dropdown-divider {
+    border-top: 1px solid #e6e6e6;
+}
+
+
+/*
+  * Dropdown Colors
+  *
+  * Create colors for buttons
+  * (.button-primary, .button-secondary, etc.)
+  */
+
+.xd-button-dropdown.button-dropdown-primary .button-dropdown-list {
+    background: rgba(27, 154, 247, 0.95);
+    border-color: #0880d7;
+}
+
+.xd-button-dropdown.button-dropdown-primary .button-dropdown-list .button-dropdown-divider {
+    border-color: #0888e6;
+}
+
+.xd-button-dropdown.button-dropdown-primary .button-dropdown-list>li>a {
+    color: #FFF;
+}
+
+.xd-button-dropdown.button-dropdown-primary .button-dropdown-list>li>a:hover {
+    color: #f2f2f2;
+    background: #088ef0;
+}
+
+.xd-button-dropdown.button-dropdown-plain .button-dropdown-list {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: #e6e6e6;
+}
+
+
+/*
+  * Buton Groups
+  *
+  * A group of related buttons
+  * displayed edge to edge
+  */
+
+.button-group {
+    position: relative;
+    display: inline-block;
+}
+
+.button-group:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+.button-group .button,
+.button-group .button-dropdown {
+    float: left;
+}
+
+.button-group .button:not(:first-child):not(:last-child),
+.button-group .button-dropdown:not(:first-child):not(:last-child) {
+    border-radius: 0;
+    border-right: none;
+}
+
+.button-group .button:first-child,
+.button-group .button-dropdown:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+}
+
+.button-group .button:last-child,
+.button-group .button-dropdown:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+
+/*
+  * Button Wrapper
+  *
+  * A wrap around effect to highlight
+  * the shape of the button and offer
+  * a subtle visual effect.
+  */
+
+.button-wrap {
+    border: 1px solid #e3e3e3;
+    display: inline-block;
+    padding: 9px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#FFF));
+    background: linear-gradient(#f2f2f2, #FFF);
+    border-radius: 200px;
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.04);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+
+/* 加载中 */
+
+@keyframes ldio {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.xd-button-loading {
+    position: relative;
+    transform: translateZ(0) scale(1);
+    backface-visibility: hidden;
+    transform-origin: 0 0;
+    padding-left: 32px!important;
+    opacity: .7;
+    pointer-events: none;
+    /* see note above */
+}
+
+.xd-button-loading i {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #ffffff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: ldio 1s linear infinite;
+    top: 16px;
+    left: 22px;
+    box-sizing: content-box;
+    display: block;
+}
+
+
+/*
+  * Button Sizes
+  *
+  * This file creates the various button sizes
+  * (ex. .button-large, .button-small, etc.)
+  */
+
+.xd-button-giant {
+    font-size: 28px;
+    height: 70px;
+    line-height: 70px;
+    padding: 0 70px;
+}
+
+.xd-button-jumbo {
+    font-size: 24px;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 60px;
+}
+
+.xd-button-large {
+    font-size: 20px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 50px;
+}
+
+.xd-button-normal {
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 40px;
+}
+
+.xd-button-small {
+    font-size: 12px;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 7px;
+}
+
+.xd-button-small.xd-button-loading {
+    position: relative;
+    transform: translateZ(0) scale(1);
+    backface-visibility: hidden;
+    transform-origin: 0 0;
+    padding-left: 25px!important;
+    opacity: .7;
+    pointer-events: none;
+    /* see note above */
+}
+
+.xd-button-small.xd-button-loading i {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: ldio 1s linear infinite;
+    top: 15px;
+    left: 15px;
+    box-sizing: content-box;
+    display: block;
+}
+
+.xd-button-small i {
+    font-size: 12px;
+}
+
+.xd-button-lg {
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+}
+
+.xd-button-lg.xd-button-loading {
+    position: relative;
+    transform: translateZ(0) scale(1);
+    backface-visibility: hidden;
+    transform-origin: 0 0;
+    padding-left: 35px!important;
+    opacity: .7;
+    pointer-events: none;
+    /* see note above */
+}
+
+.xd-button-lg.xd-button-loading i {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: ldio 1s linear infinite;
+    top: 20px;
+    left: 23px;
+    box-sizing: content-box;
+    display: block;
+}
+
+.xd-button-lg i {
+    font-size: 16px;
+}
+
+.xd-button-tiny {
+    font-size: 9.6px;
+    height: 24px;
+    line-height: 24px;
+    padding: 0 24px;
+}
