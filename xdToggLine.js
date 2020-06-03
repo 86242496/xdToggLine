@@ -6,7 +6,7 @@
         // 参数合并  
         this.options = this.extend({
             // 这个参数以后可能会更改所以暴露出去  
-            imgSrc: ""
+            id: ""
         }, options);
 
         // 判断传进来的是DOM还是字符串  
